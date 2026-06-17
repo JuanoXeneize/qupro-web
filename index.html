@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <meta name="description" content="Qupro — sistema de gestión y facturación electrónica. Llevá el control de todas las áreas de tu negocio: ventas, stock, cajas, compras y tienda online. Probalo 14 días gratis." />
+  <title>Qupro Sistema de gestión y facturación electrónica</title>
+  <link rel="icon" href="images/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#" class="brand" aria-label="Qupro inicio">
+        <img src="images/logo-qupro.png" alt="Qupro" class="brand__logo brand__logo--dark" />
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav__menu" id="navMenu">
+      <nav class="nav__links" aria-label="Navegación principal">
+        <a href="#">Inicio</a>
+        <a href="#funciones">Funciones</a>
+        <a href="#planes">Precios</a>
+        <a href="#faq">Preguntas</a>
+      </nav>
+      <div class="nav__actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema claro/oscuro">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+        <a href="https://app.qupro.co/login" target="_blank" rel="noopener" class="btn btn--ghost">Ingresar</a>
+        <a href="https://app.qupro.co/register" target="_blank" rel="noopener" class="btn btn--primary">Registrarse</a>
+      </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <span class="pill">14 días de prueba gratis</span>
+        <h1>Sistema de gestión y<br />facturación electrónica</h1>
+        <p class="lead">
+          Llevá el control de todas las áreas de tu negocio en un solo lugar:
+          ventas, stock, cajas, compras y hasta tu tienda online. 100% online,
+          desde cualquier dispositivo.
+        </p>
+        <div class="hero__cta">
+          <a href="https://app.qupro.co/register" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Iniciar prueba GRATIS</a>
+          <a href="https://app.qupro.co/login" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">Ingresar a la app</a>
+        </div>
+        <p class="hero__note">Sin tarjeta de crédito · Pagás recién cuando estés listo</p>
+      </div>
+    </div>
+    <a href="#funciones" class="hero__scroll" aria-label="Ver más contenido">
+      <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <!-- Trust -->
+  <section class="trust">
+    <div class="container">
+      <p>Una solución eficaz para potenciar comercios, pymes y profesionales de Argentina</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="funciones" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Todas las funcionalidades que tu negocio necesita</h2>
+        <p>Integrá todas las áreas en un solo sistema y llevá tu negocio al siguiente nivel.</p>
+      </div>
+      <div class="grid grid--3">
+        <article class="feature">
+          <div class="feature__icon">🧾</div>
+          <h3>Punto de venta</h3>
+          <p>Facturación electrónica conectada con ARCA (ex AFIP) y talonarios tradicionales. Ágil e intuitivo.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">🛒</div>
+          <h3>Tienda online</h3>
+          <p>Recibí pedidos desde tu tienda con stock y productos sincronizados. Creá tu catálogo online.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">🚚</div>
+          <h3>Compras</h3>
+          <p>Gestión de compras a proveedores y listado de proveedores en un solo lugar.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">📦</div>
+          <h3>Gestión de stock</h3>
+          <p>100% dinámico: se actualiza al comprar y vender. Ajustes e inventario por categorías y marcas.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">🏬</div>
+          <h3>Depósitos</h3>
+          <p>Creá depósitos y realizá movimientos de stock entre ellos.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">💳</div>
+          <h3>Cuentas corrientes</h3>
+          <p>Cuenta corriente de clientes y de proveedores, con cobranzas y órdenes de pago.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">🏦</div>
+          <h3>Cajas</h3>
+          <p>Cajas de efectivo y bancos, cheques de terceros y caja en dólares con cotización BNA.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">📋</div>
+          <h3>Presupuestos</h3>
+          <p>Historial de presupuestos y conversión a venta en un solo click.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">💲</div>
+          <h3>Listas de precios</h3>
+          <p>Creá listas, actualizá precios por lote y convertí a dólares automáticamente.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">📊</div>
+          <h3>Reportes</h3>
+          <p>Ventas e IVA ventas, compras e IVA compras, inventario y mínimos de stock.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">📈</div>
+          <h3>Estadísticas</h3>
+          <p>Métricas de ventas, ranking de productos y ranking de vendedores.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">👥</div>
+          <h3>Usuarios</h3>
+          <p>Múltiples usuarios, accesos limitados por módulo e historial por usuario.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Tu negocio, siempre con vos</h2>
+        <p>Gestioná y vendé estés donde estés, en cualquier momento y desde cualquier dispositivo.</p>
+      </div>
+      <div class="showcase">
+        <figure class="shot">
+          <img src="images/bg-1.png" alt="Comerciante revisando sus ventas desde el celular en la calle" />
+          <figcaption>Seguí tus ventas desde el celular, donde estés</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/bg-2.png" alt="Persona usando Qupro desde un café" />
+          <figcaption>Tomá decisiones en tiempo real, en cualquier momento</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCA integration -->
+  <section id="arca" class="section section--alt">
+    <div class="container arca">
+      <div class="arca__media">
+        <img src="images/arca_logo.jpg" alt="Logo de ARCA" class="arca__logo" />
+      </div>
+      <div class="arca__copy">
+        <span class="pill">Facturación electrónica</span>
+        <h2>Integración directa con ARCA</h2>
+        <p class="lead">
+          Qupro se conecta con <strong>ARCA</strong> (ex AFIP) para que emitas tus
+          comprobantes con validez fiscal en segundos, sin salir del sistema.
+        </p>
+        <ul class="arca__list">
+          <li>Facturas A, B y C, notas de crédito y débito</li>
+          <li>Obtención automática del CAE en cada comprobante</li>
+          <li>Conexión segura y en tiempo real con ARCA</li>
+          <li>Punto de venta habilitado y comprobantes listos para imprimir o enviar</li>
+        </ul>
+        <p class="arca__note">ARCA es la Agencia de Recaudación y Control Aduanero, el organismo que reemplazó a la AFIP.</p>
+        <a href="https://app.qupro.co/register" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Empezar a facturar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value band -->
+  <section class="section section--alt">
+    <div class="container split">
+      <div class="split__media">
+        <img src="images/bg-4.png" alt="Persona gestionando su negocio con Qupro desde su casa" class="split__img" />
+      </div>
+      <div class="split__copy">
+        <h2>100% online. En tu local, en la oficina o en tu bolsillo</h2>
+        <p class="lead">Ingresá cuando quieras, desde cualquier dispositivo con una conexión mínima a internet.</p>
+        <div class="values">
+          <div class="value">
+            <h3>Controlá tus ventas en un click</h3>
+            <p>Sabé cuándo y cuánto vendés al instante, desde cualquier lugar y dispositivo.</p>
+          </div>
+          <div class="value">
+            <h3>Ahorrá tiempo</h3>
+            <p>Una solución pensada para el uso diario que minimiza la complejidad sin perder potencial.</p>
+          </div>
+          <div class="value">
+            <h3>Siempre sincronizado</h3>
+            <p>Tu información actualizada las 24 horas en computadoras, notebooks, tablets o celulares.</p>
+          </div>
+        </div>
+        <a href="https://app.qupro.co/register" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Crear mi cuenta gratis</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="planes" class="section section--tint">
+    <div class="container">
+      <div class="section__head">
+        <h2>Elegí el plan a la medida de tu negocio</h2>
+        <p>Probalo 14 días gratis. Abono mensual por sucursal, IVA incluido. Sin contrato de permanencia.</p>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <h3 class="plan__name">Bronce</h3>
+          <div class="plan__price">$50.000<span>/mes</span></div>
+          <p class="plan__meta">IVA incluido · por sucursal</p>
+          <ul class="plan__list">
+            <li>Facturador electrónico</li>
+            <li>Clientes y reportes de ventas</li>
+            <li>Compras, proveedores y reportes</li>
+            <li>Manejo de sucursales</li>
+            <li>Inventario, categorías y marcas</li>
+            <li>Actualización de precios por lote</li>
+            <li>Cajas</li>
+          </ul>
+          <a href="https://app.qupro.co/register" target="_blank" rel="noopener" class="btn btn--ghost btn--block">Empezar gratis</a>
+        </article>
+
+        <article class="plan plan--featured">
+          <span class="plan__badge">Más elegido</span>
+          <h3 class="plan__name">Plata</h3>
+          <div class="plan__price">$60.000<span>/mes</span></div>
+          <p class="plan__meta">IVA incluido · por sucursal</p>
+          <ul class="plan__list">
+            <li><strong>Todo lo de Bronce, más:</strong></li>
+            <li>Cuenta corriente de clientes y proveedores</li>
+            <li>Cobranzas y órdenes de pago</li>
+            <li>Gestión de stock</li>
+            <li>Consultador de precios para clientes</li>
+            <li>Gestión de cheques</li>
+          </ul>
+          <a href="https://app.qupro.co/register" target="_blank" rel="noopener" class="btn btn--primary btn--block">Empezar gratis</a>
+        </article>
+
+        <article class="plan">
+          <h3 class="plan__name">Oro</h3>
+          <div class="plan__price">$80.000<span>/mes</span></div>
+          <p class="plan__meta">IVA incluido · por sucursal</p>
+          <ul class="plan__list">
+            <li><strong>Todo lo de Plata, más:</strong></li>
+            <li>Tienda online personalizable</li>
+            <li>Catálogo y stock sincronizados</li>
+            <li>Módulo de vendedores</li>
+          </ul>
+          <a href="https://app.qupro.co/register" target="_blank" rel="noopener" class="btn btn--ghost btn--block">Empezar gratis</a>
+        </article>
+      </div>
+      <div class="payments">
+        <h3 class="payments__title">Medios de pago</h3>
+        <img src="images/medios-de-pago.jpg" alt="Medios de pago: Mercado Pago, Visa, Mastercard, American Express, Naranja, Cabal, Pago Fácil, Link, Rapipago y Provincia NET. Hasta 12 cuotas." class="payments__img" />
+        <p class="plans__note">Aceptamos todas las tarjetas de crédito, Pago Fácil, Rapipago, Link, Provincia NET o transferencia bancaria. Hasta 12 cuotas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section section--alt">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <h2>Preguntas frecuentes</h2>
+        <p>Todo lo que necesitás saber antes de empezar.</p>
+      </div>
+      <div class="faq">
+        <details class="faq__item">
+          <summary>¿Cómo me registro?</summary>
+          <p>Registrate a nuestra prueba totalmente gratuita durante 14 días y pagá una vez que estés listo para empezar a usar Qupro.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Cómo integro la facturación electrónica?</summary>
+          <p>No es un requisito para empezar: podés usar Qupro y activar la facturación electrónica en el momento que lo necesites. Cuando quieras, Qupro se conecta directamente con ARCA (ex AFIP): cargás tu CUIT y los puntos de venta, y autorizás a Qupro como facturador electrónico. Una vez vinculado, cada comprobante obtiene el CAE automáticamente al emitirse. Además contamos con instructivos paso a paso para realizar el trámite desde la página de ARCA, y te acompañamos por WhatsApp si necesitás una mano.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Tengo que usarlo para siempre?</summary>
+          <p>De ninguna manera. Qupro es un servicio que se paga de manera mensual y no estás atado a ningún contrato que te impida irte.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Cuáles son las opciones de pago?</summary>
+          <p>Aceptamos pagos con todas las tarjetas de crédito, Bapro, Pago Fácil, Rapipago o transferencia bancaria.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Está segura mi información?</summary>
+          <p>Toda tu información está protegida: realizamos backups automáticos cada 24 horas.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Están protegidas mis transacciones?</summary>
+          <p>Todos tus movimientos financieros están asegurados a través de encriptación SSL.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Tenés más preguntas?</summary>
+          <p>Estamos disponibles de lunes a viernes de 9 a 18 hs por WhatsApp. Escribinos para despejar tus dudas.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-box cta-box--photo">
+        <div>
+          <h3>Creá tu cuenta gratis</h3>
+          <p>Simplificá la gestión de tu negocio. 14 días de prueba, sin tarjeta.</p>
+        </div>
+        <a href="https://app.qupro.co/register" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Iniciar prueba GRATIS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="images/logo-qupro.png" alt="Qupro" class="brand__logo" />
+        <p>Sistema de gestión y facturación electrónica para tu negocio.</p>
+      </div>
+      <div class="footer__links">
+        <span class="footer__title">Navegación</span>
+        <a href="#">Inicio</a>
+        <a href="#funciones">Funciones</a>
+        <a href="#planes">Precios</a>
+        <a href="#faq">Preguntas frecuentes</a>
+        <a href="terminos-y-condiciones.html">Términos y condiciones</a>
+        <a href="politica-de-proteccion.html">Política de protección de datos</a>
+      </div>
+      <div class="footer__social">
+        <span class="footer__title">Redes y contacto</span>
+        <div class="socials">
+          <a href="https://wa.me/+5492235113393" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/qupro_soft/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/qupro.soft" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+        <p class="footer__contact">Lun a Vie de 9 a 18 hs</p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>Mar del Plata, Argentina · © <span id="year"></span> Qupro. Todos los derechos reservados.</span>
+      <a href="https://app.qupro.co/register" target="_blank" rel="noopener" class="btn btn--primary">Probar gratis</a>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/+5492235113393" target="_blank" rel="noopener" class="wa-float" aria-label="Escribinos por WhatsApp">
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <!-- Volver arriba -->
+  <button id="toTop" class="to-top" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
